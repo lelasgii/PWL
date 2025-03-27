@@ -38,12 +38,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .btn-primary {
-            background-color:rgb(230, 157, 0);
+            background-color: #007bff;
             border: none;
             transition: 0.3s;
         }
         .btn-primary:hover {
-            background-color: rgb(255, 128, 0);
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -52,18 +52,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h2 class="text-center mb-3">Edit Produk</h2>
         <form method="POST">
             <div class="mb-3">
-                <label class="form-label">Nama Produk</label>
+                <label class="form-label">Nama Produk:</label>
                 <input type="text" name="nama_produk" value="<?= htmlspecialchars($product['nama_produk']) ?>" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label class="form-label">Harga</label>
+                <label class="form-label">Harga:</label>
                 <input type="number" step="0.01" name="harga" value="<?= $product['harga'] ?>" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label class="form-label">Stok</label>
+                <label class="form-label">Stok:</label>
                 <input type="number" name="stok" value="<?= $product['stok'] ?>" class="form-control" required>
             </div>
-            <button type="submit" class="btn btn-primary w-100">Update</button>
+            <button type="submit" class="btn btn-warning w-100">Update</button>
             <a href="tabelproducts_07048.php" class="btn btn-secondary w-100 mt-2">Batal</a>
         </form>
     </div>
